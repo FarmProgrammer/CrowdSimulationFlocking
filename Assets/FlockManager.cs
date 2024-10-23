@@ -48,4 +48,10 @@ public class FlockManager : MonoBehaviour
                                                             Random.Range(-swimLimits.z, swimLimits.z));
         }
     }
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.black;
+        Gizmos.DrawWireCube(transform.position, swimLimits * 2);
+    }
 }
